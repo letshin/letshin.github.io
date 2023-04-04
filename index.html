@@ -101,13 +101,8 @@
 
 	<script type="application/javascript">
 	  function getIP(json) {
-	     console.log(json.ip);
-			mixpanel.identify( json.ip );
-			mixpanel.people.set({
-				"$first_name": json.ip ,
-				"$ip": json.ip,
-			});
-			mixpanel.track("Index");
+		mixpanel.identify( json.ip );
+
 	  }
 	</script>
 	<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
