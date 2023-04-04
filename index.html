@@ -102,6 +102,11 @@ MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"//cdn.mxpnl.com/libs/mix
   	<script type="application/javascript">
 	  function getIP(json) {
 	     console.log(json.ip);
+			import mixpanel from 'mixpanel-browser';
+
+			// Replace YOUR_TOKEN with your Project Token
+			mixpanel.init('0496582e6db9980e0147c71b2bce62c4', {debug: true}); 
+
 			mixpanel.identify( json.ip );
 			mixpanel.people.set({
 				"$first_name": json.ip ,
