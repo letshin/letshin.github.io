@@ -100,10 +100,10 @@
   <div class="footer">
 
 	<script type="application/javascript">
-	  function getIP(json) {
-		mixpanel.identify( json.ip );
-
-	  }
+		function getIP(json) {	
+			mixpanel.identify( json.ip );
+		}
+		mixpanel.track("Terabithia Index");
 	</script>
 	<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 	
