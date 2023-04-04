@@ -99,17 +99,18 @@
   <div class="footer">
 
   	<script type="application/javascript">
-	  function getIP(json) {
-	    console.log(json.ip);
+		function getIP(json) {
+			console.log(json.ip);		
+		}
+
 		import mixpanel from 'mixpanel-browser';
 		mixpanel.init('0496582e6db9980e0147c71b2bce62c4', {debug: true}); 
-		mixpanel.track("Visitor",{ip: json.ip});
-		alert(json.ip);
 		mixpanel.identify('test')
 		mixpanel.track('Visited Homepage', {
 		  'ip': 'Referral',
 		});
-	  }
+		
+
 	</script>
 	<script type="application/javascript" src="https://api.ipify.org?format=json&callback=getIP"></script>
 	
